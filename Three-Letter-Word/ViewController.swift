@@ -11,9 +11,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
-
+//when you do your rock paper scissors project under view there us a place called "tag" that is the index, so if you have an array you can change it to be the index of the array.
+    
 }
 
