@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DmM-Uf-72S">
-                                <rect key="frame" x="30" y="74" width="354" height="208.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DmM-Uf-72S">
+                                <rect key="frame" x="30" y="74" width="354" height="280.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Letter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAY-kh-1yT">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="20.5"/>
@@ -32,29 +32,32 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M5U-mM-vSG">
-                                        <rect key="frame" x="0.0" y="80.5" width="354" height="98"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5U-mM-vSG">
+                                        <rect key="frame" x="0.0" y="80.5" width="354" height="100"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="0l1-1i-9M6"/>
+                                        </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="2j6-bq-CZz">
-                                        <rect key="frame" x="0.0" y="178.5" width="354" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="2j6-bq-CZz">
+                                        <rect key="frame" x="0.0" y="180.5" width="354" height="100"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4W6-PB-GvN">
-                                                <rect key="frame" x="0.0" y="0.0" width="98" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="100"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IoZ-4c-c9n">
-                                                <rect key="frame" x="128" y="0.0" width="98" height="30"/>
+                                                <rect key="frame" x="128" y="0.0" width="98" height="100"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lb5-3s-ZVi">
-                                                <rect key="frame" x="256" y="0.0" width="98" height="30"/>
+                                                <rect key="frame" x="256" y="0.0" width="98" height="100"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
@@ -62,9 +65,11 @@
                                             </label>
                                         </subviews>
                                         <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="3SZ-dJ-ndu"/>
+                                        </constraints>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="9tc-Mj-vS5" appends="YES" id="KfM-A0-KVi"/>
-                                            <outletCollection property="gestureRecognizers" destination="9tc-Mj-vS5" appends="YES" id="8TL-R7-qJW"/>
+                                            <outletCollection property="gestureRecognizers" destination="26s-K9-3na" appends="YES" id="Yhe-B4-ZkQ"/>
                                         </connections>
                                     </stackView>
                                 </subviews>
@@ -78,9 +83,20 @@
                             <constraint firstItem="DmM-Uf-72S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="vf5-Yr-Fab"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentLetterLabel" destination="wJ5-7c-ZWN" id="pir-rt-n0M"/>
+                        <outlet property="stackView" destination="2j6-bq-CZz" id="Rte-MZ-078"/>
+                        <outletCollection property="wordLabels" destination="IoZ-4c-c9n" collectionClass="NSMutableArray" id="Gik-7I-u7F"/>
+                        <outletCollection property="wordLabels" destination="4W6-PB-GvN" collectionClass="NSMutableArray" id="46C-sg-y63"/>
+                        <outletCollection property="wordLabels" destination="lb5-3s-ZVi" collectionClass="NSMutableArray" id="6qv-4O-7Sj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="9tc-Mj-vS5"/>
+                <tapGestureRecognizer id="26s-K9-3na">
+                    <connections>
+                        <action selector="whenTapped2:" destination="BYZ-38-t0r" id="wgu-H5-bIX"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="81.696428571428569"/>
         </scene>
